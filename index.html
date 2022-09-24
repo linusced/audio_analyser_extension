@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./js/classes.js"></script>
+    <script src="./js/math.js"></script>
+    <script src="./js/document.js"></script>
+    <title>Audio Analyser</title>
+</head>
+
+<body>
+    <main>
+        <div id="canvas-container">
+            <div id="canvas-context-hz"></div>
+            <div id="canvas-context-db"></div>
+            <canvas id="frequencies" width="1000" height="450"></canvas>
+            <canvas id="frequency-inspector" width="1000" height="450"></canvas>
+        </div>
+        <div id="audio-meters">
+            <div id="meter-wrapper">
+                <div id="meter-context"></div>
+                <div class="meter-container" id="peak">
+                    <div class="meter-label">
+                        <p>Peak</p>
+                        <p class="db"></p>
+                    </div>
+                    <div class="meter">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="meter-container" id="rms">
+                    <div class="meter-label">
+                        <p>RMS</p>
+                        <p class="db"></p>
+                    </div>
+                    <div class="meter">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="meter-container" id="peak-left">
+                    <div class="meter-label">
+                        <p>Peak left</p>
+                        <p class="db"></p>
+                    </div>
+                    <div class="meter">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="meter-container" id="peak-right">
+                    <div class="meter-label">
+                        <p>Peak right</p>
+                        <p class="db"></p>
+                    </div>
+                    <div class="meter">
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="option" title="The maximum amount of decibels (dBFS) displayed one the frequency canvas.">
+            <h1>Max dB</h1>
+            <div class="input-knob" id="max-decibels"></div>
+        </div>
+        <div class="option" title="The minimum amount of decibels (dBFS) displayed on the frequency canvas.">
+            <h1>Min dB</h1>
+            <div class="input-knob" id="min-decibels"></div>
+        </div>
+        <div class="option"
+            title="The delay (in milliseconds) of the audio playback since the analyser recieved the audio signal. By keeping this option at the maximum value; the visuals on the frequency canvas is more in sync with the audio that is played through your speakers.">
+            <h1>Playback Delay<br>(ms)</h1>
+            <div class="input-knob" id="delay"></div>
+        </div>
+        <div class="option" title="The amount of audio meters displayed in the window.">
+            <h1>Audio Meters</h1>
+            <div class="input-knob" id="meter-amount"></div>
+        </div>
+        <div class="option"
+            title="The zoom level (in percentage, 1 = 100%) of the current window. This setting also changes the size of the window.">
+            <h1>Window size<br>(zoom level)</h1>
+            <div class="input-knob" id="window-size"></div>
+        </div>
+    </footer>
+    <script src="./js/analyser.js"></script>
+</body>
+
+</html>

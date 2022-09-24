@@ -1,0 +1,221 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-align: center;
+    flex-shrink: 0
+}
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background: #051836
+}
+main {
+    margin-bottom: 20px;
+    padding: 20px 5px 20px 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    background: #000a;
+    width: 100%;
+    overflow: hidden;
+    cursor: default;
+    user-select: none
+}
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    padding: 0 20px;
+    margin-bottom: 20px
+}
+p {
+    color: #fff;
+    font-size: 12px;
+    white-space: nowrap;
+    z-index: 1
+}
+h1 {
+    font-size: 20px;
+    color: #fff
+}
+.db::after {
+    content: ' dB'
+}
+.hz::after {
+    content: ' Hz'
+}
+.khz::after {
+    content: ' kHz'
+}
+#audio-meters {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    overflow: visible;
+    height: 500px;
+    width: 125px
+}
+#meter-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    padding-left: 50px;
+    background: #000;
+    border-left: 2px solid #fff;
+    cursor: w-resize;
+    z-index: 3
+}
+#meter-context {
+    position: absolute;
+    bottom: 0;
+    left: 50px;
+    width: 100%;
+    height: 450px;
+    overflow: visible
+}
+#meter-context span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    border-top: 2px solid #0afa;
+    overflow: visible;
+    z-index: 1
+}
+#meter-context span p {
+    width: 50px;
+    transform: translate(-50px, -60%)
+}
+.meter-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 75px;
+    height: 500px;
+    border-left: 2px solid #0af
+}
+.meter-label {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 50px
+}
+.meter-label p {
+    background: #000a;
+    padding: 0 3px
+}
+.meter {
+    position: relative;
+    height: 450px;
+    overflow: visible;
+    width: 50%;
+    margin: 0 auto
+}
+.meter span {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    height: 0;
+    background: #fff
+}
+#canvas-container {
+    position: relative;
+    width: 1090px;
+    height: 500px
+}
+#canvas-context-hz {
+    position: absolute;
+    bottom: 0;
+    right: 40px;
+    width: 1000px;
+    height: 490px;
+    overflow: visible;
+    z-index: 0
+}
+#canvas-context-hz span {
+    position: absolute;
+    top: 0;
+    height: 450px;
+    border-left: 2px solid #fff3;
+    overflow: visible
+}
+#canvas-context-hz span p {
+    transform: translate(-40%, 462px)
+}
+#canvas-context-db {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 1050px;
+    height: 450px;
+    overflow: visible;
+    z-index: 0
+}
+#canvas-context-db span {
+    position: absolute;
+    right: 0;
+    width: 1000px;
+    border-top: 2px solid #fff3;
+    overflow: visible
+}
+#canvas-context-db span p {
+    text-align: right;
+    transform: translate(-101%, -60%)
+}
+#canvas-container canvas {
+    position: absolute;
+    top: 10px;
+    right: 40px;
+    z-index: 1
+}
+#frequency-inspector {
+    cursor: crosshair;
+    z-index: 2 !important
+}
+.option {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0 20px
+}
+.option h1 {
+    margin-bottom: 10px;
+    user-select: none;
+    min-height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+.input-knob {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    cursor: grab
+}
+.input-knob span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    border: none;
+    background: none;
+    font-size: 20px;
+    user-select: none
+}
